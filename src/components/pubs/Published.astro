@@ -14,6 +14,7 @@ interface JournalArticle {
   doi?: string;
   pdfUrl?: string;
   altUrl?: string;
+  altmetricImg?: string;
   isRequest: boolean;
 }
 
@@ -27,16 +28,21 @@ const {
   doi,
   altUrl,
   pdfUrl,
+  altmetricImg,
   isRequest,
 } = Astro.props as JournalArticle;
 ---
 
-<div class=`my-2 ${id}`>
-  <p class="text-chetwode-950 dark:text-chetwode-50">
-    <Authors authors={authors} />. {year}. {title}. <em>{journal}</em>, {
-      pageVol
-    }. {doi}
-  </p>
+<div class={`my-2 ${id}`}>
+  <div class="flex items-center gap-3">
+    {altmetricImg && (
+      <img src={altmetricImg} alt="Altmetric score" class="w-16 h-16" />
+    )}
+    <p class="text-chetwode-950 dark:text-chetwode-50">
+      <Authors authors={authors} />. {year}. {title}. <em>{journal}</em>, {pageVol}.
+    </p>
+  </div>
+
   {
     (doi || altUrl) && (
       <WrapButton>

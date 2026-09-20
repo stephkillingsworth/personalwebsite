@@ -15,11 +15,11 @@ const { authors } = Astro.props;
 {
   authors.map((part: string, index: number, array: string[]) => (
     <>
-      {part === "Handika, H." ? (
-        <strong class="text-chetwode-700 dark:text-chetwode-400">{part}</strong>
-      ) : (
-        part
-      )}
+      {part.includes("Killingsworth") ? (
+  <strong class="text-chetwode-700 dark:text-chetwode-400">{part}</strong>
+) : (
+  part
+)}
       {index < array.length - 2 && ", "}
       {index === array.length - 2 && array.length > 2 && ", and "}
       {index === array.length - 2 && array.length === 2 && " and "}

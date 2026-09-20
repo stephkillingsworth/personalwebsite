@@ -1,0 +1,179 @@
+---
+import PageTitle from "../../components/PageTitle.astro";
+import PageSubtitle from "../../components/PageSubtitle.astro";
+import CardLayout from "../../layouts/CardLayout.astro";
+import Card from "../../components/Card.astro";
+import Background from "../../components/Background.astro";
+import outreachIcon from "../../assets/icons/outreach.svg";
+import cntl from "cntl";
+
+const cardDescriptionClasses = cntl`
+  mt-2
+  text-porsche-950
+  text-md
+`;
+
+const grants = [
+  {
+    amount: "$5,000",
+    title: "NAS Inspire Award",
+    description: "ECR Fellows to Connect with K-12 Students in the Gulf Region",
+    year: "2025",
+  },
+  {
+    amount: "$12,959",
+    title: "Bureau of Land Management Sub Award",
+    description: "Your Public Lands at Risk — Archaeological Exploration of the Jupiter Inlet and Lighthouse",
+    year: "2025",
+  },
+  {
+    amount: "$21,000",
+    title: "Dickinson Fund",
+    description: "Florida Museum of Natural History Vertebrate Paleontology",
+    year: "2024",
+  },
+  {
+    amount: "$561,270",
+    title: "Senior Personnel Sub-Award | NSF#AWD16116",
+    description: "Trait-shift induced interaction modification. P.I. Xue, B. & Leibold, M. | UF Department of Physics",
+    year: "2024",
+  },
+  {
+    amount: "$12,667,073",
+    title: "Senior Personnel Sub-Award | NSF#DBI-2320251",
+    description: "BII: Polyploidy: Integration Across Scales and Biological Systems. P.I. Soltis, P. & others | UF Department of Natural History",
+    year: "2023",
+  },
+  {
+    amount: "$695,318",
+    title: "Senior Personnel Sub-Award | NSF#AWD12799",
+    description: "Research Infrastructure: Moving and Improving the Florida Museum Fish Collection. P.I. Page, L. | UF Department of Natural History-Ichthyology",
+    year: "2022",
+  },
+  {
+    amount: "$1,275,109",
+    title: "Senior Personnel Sub-Award | NSF#2147625",
+    description: "Innovative Technology Experiences for Students and Teachers (ITEST). DTI: Teaching Middle School Students Machine Learning Concepts and Applications in Science with Fossil Shark Teeth. P.I. MacFadden, B. & Others | UF Department of Natural History",
+    year: "2022",
+  },
+  {
+    amount: "$5,500",
+    title: "Paleontological Society and Alachua School District",
+    description: "Chewing on Change: Bringing Fossil Horses into Title I Schools to Learn About Macroevolution",
+    year: "2022",
+  },
+  {
+    amount: "$945,996",
+    title: "Senior Personnel Sub-Award | NSF#2114833",
+    description: "Intramembrane Proteolysis in Regulation of the Rice Receptor Kinase XA21. P.I. Song, W. Y.",
+    year: "2021",
+  },
+  {
+    amount: "$15,000",
+    title: "Surface 71",
+    description: "Palm Beach Philanthropy Tank",
+    year: "2018",
+  },
+];
+
+const pdPrograms = [
+  { title: "Modeling Human Behavior in Climate Disasters Using Artificial Intelligence", collaborators: "Killingsworth, S., Zhao, X.", years: "2026–2027" },
+  { title: "Experimental Design Using Robotic Fish", collaborators: "Killingsworth, S., Musgrave, P.", years: "2026–2027" },
+  { title: "Archaeological Exploration of the Jupiter Inlet", collaborators: "Killingsworth, S., Neilson, A.", years: "2026–2027" },
+  { title: "Chewing on Change — Using Machine Learning Models to Assess Variation in Fossilized Horse Teeth For Species Classification", collaborators: "Killingsworth, S., Neilsen, A., & Wuslyko, C.", years: "2026" },
+  { title: "Ecological Competition Between Invasive and Native Species", collaborators: "Killingsworth, S., Xue, B., & Leibold, M.", years: "2025" },
+  { title: "BII: Polyploidy: Integration Across Scales and Biological Systems", collaborators: "Killingsworth, S., Soltis, P., & Soltis, D.", years: "2025–2028" },
+  { title: "Research Infrastructure: Moving and Improving the Florida Museum Fish Collection", collaborators: "Killingsworth, S., & Ennes, M.", years: "2023–2024" },
+  { title: "Chewing on Change: Bringing Fossil Horses into Title I Schools to Learn About Macroevolution", collaborators: "Killingsworth, S., Abramowitz, B., Bokor, J., Pirlo, J., & MacFadden, B.", years: "2022" },
+  { title: "SEFS Cohort I–IV: AI Learning in K-12 with Fossil Sharks", collaborators: "Killingsworth, S., Abramowitz, B., MacFadden, B., Antonenko, P., & Waisome, J.", years: "2022–2025" },
+  { title: "SEFS Cohorts I–IV: Plant Pathology Professional Development for High School Teachers", collaborators: "Killingsworth, S., Song, W. Y.", years: "2022–2025" },
+  { title: "SEFS Paleo PD", collaborators: "Killingsworth, S., Abramowitz, B., Pirlo, J., & MacFadden, B.", years: "2022" },
+  { title: "Adaptations, Evolution, and Climate Change Miami-Dade Teacher Professional Development", collaborators: "Killingsworth, S., Abramowitz, B., Carter, K., & MacFadden, B.", years: "2022" },
+  { title: "The Hydrosphere Summer Professional Development for Teachers", collaborators: "Killingsworth, S., & Abramowitz, B.", years: "2021" },
+  { title: "SEFS Paleo PD", collaborators: "Killingsworth, S., Abramowitz, B., Pirlo, J., & MacFadden, B.", years: "2021" },
+  { title: "The Nature of Science Summer Professional Development for Teachers", collaborators: "Killingsworth, S., & Abramowitz, B.", years: "2020" },
+  { title: "World Wetlands January Summit Teacher Professional Development", collaborators: "Killingsworth, S., Abramowitz, B., & MacFadden, B.", years: "2020" },
+  { title: "Florida Association of Science Teachers Conference: The Case of Coral", collaborators: "Killingsworth, S.", years: "2019" },
+  { title: "Connections to the Biosphere Summer Professional Development", collaborators: "Killingsworth, S., Abramowitz, B., Pirlo, J., & MacFadden, B.", years: "2019" },
+  { title: "SEFS Montbrook Dig Experience Professional Development", collaborators: "Killingsworth, S., Abramowitz, B., Pirlo, J., & MacFadden, B.", years: "2019" },
+];
+---
+
+<div class="mx-auto h-full max-w-5xl py-6 sm:py-16 lg:py-8">
+  <Background backgroundImage={outreachIcon} />
+  <PageTitle title="Grants, Leadership, & Outreach" />
+  <CardLayout>
+    {
+      grants.map((grant, index) => (
+        <Card
+          title={grant.title}
+          subtitle={grant.amount + " · " + grant.year}
+          isLast={index === grants.length - 1}
+        >
+          <p class={cardDescriptionClasses}>{grant.description}</p>
+        </Card>
+      ))
+    }
+  </CardLayout>
+
+  <PageSubtitle subtitle="Professional Development K-12 Program Initiatives" />
+  <CardLayout>
+    {
+      pdPrograms.map((program, index) => (
+        <Card
+          title={program.title}
+          subtitle={program.years}
+          isLast={index === pdPrograms.length - 1}
+        >
+          <p class={cardDescriptionClasses}>{program.collaborators}</p>
+        </Card>
+      ))
+    }
+  </CardLayout>
+
+  <PageSubtitle subtitle="Outreach & Service" />
+  <CardLayout>
+    <Card title="Scientist Outreach" subtitle="2019–Present">
+      <p class={cardDescriptionClasses}>Scientist in Every Florida School</p>
+    </Card>
+    <Card title="Non-Profit Volunteer" subtitle="2025–Present" isLast={true}>
+      <p class={cardDescriptionClasses}>Big Dog Ranch Rescue</p>
+    </Card>
+  </CardLayout>
+
+  <PageSubtitle subtitle="Museum Mentorship & Leadership" />
+  <CardLayout>
+    <Card title="Mentoring & Supervising" subtitle="2025">
+      <p class={cardDescriptionClasses}>Undergraduate Alexa Neilson</p>
+    </Card>
+    <Card title="Mentoring Undergraduate Student" subtitle="2023">
+      <p class={cardDescriptionClasses}>Sam Zbinden</p>
+    </Card>
+    <Card title="Selection Committee Member" subtitle="2023" isLast={true}>
+      <p class={cardDescriptionClasses}>VP Assistant Curator for the Florida Museum of Natural History</p>
+    </Card>
+  </CardLayout>
+
+  <PageSubtitle subtitle="Education Mentorship & Leadership" />
+  <CardLayout>
+    <Card title="Presidential Award of Excellence in Math & Science Teaching Judge" subtitle="2020–2022" isLast={false} />
+    <Card title="Florida Association of Science Teachers (FAST) Area 10 Director" subtitle="2019–2022" isLast={false} />
+    <Card title="National Association of Geoscience Teachers (NAGT) SE Representative" subtitle="2019–2022" isLast={true} />
+  </CardLayout>
+
+  <PageSubtitle subtitle="Journal Reviews" />
+  <CardLayout>
+    <Card title="Manuscript Reviewer — Springer PalZ Journal" subtitle="2026" isLast={false} />
+    <Card title="Manuscript Reviewer — Paleobiology" subtitle="2025" isLast={false} />
+    <Card title="Manuscript Reviewer — Journal of Paleontology" subtitle="2023" isLast={true} />
+  </CardLayout>
+
+  <PageSubtitle subtitle="Professional Membership" />
+  <CardLayout>
+    <Card title="Paleontological Society" isLast={false} />
+    <Card title="Society for Vertebrate Paleontology" isLast={false} />
+    <Card title="American Women in Geosciences" subtitle="Northern Florida Chapter" isLast={false} />
+    <Card title="Geological Society of America" isLast={false} />
+    <Card title="American Alliance of Museums" isLast={true} />
+  </CardLayout>
+</div>

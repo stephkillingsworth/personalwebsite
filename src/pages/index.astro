@@ -81,8 +81,8 @@ const keywordClasses = cntl`
 `;
 
 const keywordList = [
-  "In situ diversification",
-  "Biodiversity Informatics",
+  "Cenozoic Mammals",
+  "Museum Collections",
   "Artificial Intelligence",
 ];
 
@@ -127,7 +127,7 @@ const buttonClasses = cntl`
 ---
 
 <Layout
-  title="Island small mammals and efficient, scalable biodiversity software"
+  title="Cenozoic mammalian evolution, museum collections, and quantitative paleobiology"
 >
   <MainPage>
     <Background backgroundImage={rodentSvg} />
@@ -141,10 +141,10 @@ const buttonClasses = cntl`
         alt="Handika's profile"
       />
       <h1 class={titleClasses}>
-        Hi, I'm <strong>Heru Handika</strong>
+        Hi, I'm <strong>Stephanie R. Killingsworth</strong>
       </h1>
       <PageDescription>
-        Post-Doctoral Associate · the University of Florida, USA
+        Ph.D. Candidate · Vertebrate Paleontology · Department of Geological Sciences · University of Florida, USA
       </PageDescription>
       <div
         class="flex flex-wrap justify-center gap-x-2 gap-y-2 sm:gap-x-4 px-2 mt-2"
@@ -158,47 +158,54 @@ const buttonClasses = cntl`
         }
       </div>
       <p class={heroTextClasses}>
-        I study island small-mammal diversity and speciation, and build open,
-        scalable tools to enhance data integration, curation, and access for
-        biodiversity research. My work combines fieldwork in remote montane
-        forests, leveraging emerging AI technologies, and developing computer
-        programs that scale from mobile devices and personal computers, to
-        high-performance computing clusters.
+        I am a vertebrate paleontologist and Ph.D. candidate at the University of Florida
+        and Florida Museum of Natural History whose research integrates museum collections, 
+        morphology, paleobiology, and evolutionary history to investigate patterns of 
+        mammalian diversity and adaptation through the Cenozoic. My work focuses on fossil 
+        mammals and the use of quantitative approaches, including geometric morphometrics, Bayesian
+        phylogenetics, and Artificial Intelligence to address questions in evolution and paleoecology.
+
+        In parallel, I develop Broader Impacts intiatives that connect scientists, museums, 
+        K-12 educators, and communities through professional development, outreach, and 
+        authentic STEM-based experiences and AI-intetegrated 21st Century careers.
+
       </p>
     </div>
     <SocialMediaIcons />
     <div class={statsGridClasses}>
-      <Stats title="Fieldwork" value="30" unit="expeditions" url="/fieldwork" />
-      <Stats
-        title="Specimen contribution"
-        value="8k"
-        unit="vouchers"
-        url="/fieldwork"
-      />
-      <Stats title="Code written" value="500K" unit="lines" url="/software" />
-    </div>
-    <div id="key-approach" class="mt-16 mx-auto text-center text-pretty">
-      <p class="text-porsche-950 dark:text-porsche-50 text-lg">
-        I describe my work as:
-      </p>
-      <p class={researchSentenceClasses}>
-        "An end-to-end approach to accelerate and broaden access to cutting-edge
-        collection-based evolutionary studies"
-      </p>
-    </div>
-    <div class="mt-16"></div>
-    <!-- <div class="flex flex-col lg:flex-row items-start justify-start gap-8 mt-4">
-      <div>
-        <Image
-          class="block
-      mx-auto
-      rounded-lg
-      shadow-lg"
-          src={handikaResearch}
-          alt="Handika's both code- and field-intensive research"
-          width={400}
-        />
-      </div> -->
+  <Stats
+    title="Research"
+    value="Neogene"
+    unit="fossil horses"
+    url="/projects"
+  />
+
+  <Stats
+    title="Collections"
+    value="Museum"
+    unit="specimen-based research"
+    url="/fieldwork"
+  />
+
+  <Stats
+    title="Outreach"
+    value="K-12"
+    unit="teacher & scientist partnerships"
+    url="/cv"
+  />
+</div>
+
+<div id="key-approach" class="mt-16 mx-auto text-center text-pretty">
+  <p class="text-porsche-950 dark:text-porsche-50 text-lg">
+    Research Focus:
+  </p>
+
+  <p class={researchSentenceClasses}>
+    "Investigating the evolutionary history of Cenozoic mammals through museum
+    collections, geometric morphometrics, artificial intelligence, and
+    phylogenetic approaches."
+  </p>
+</div>
     <!-- <div class="text-left">
         <h2 class="mb-2 text-xl text-porsche-950 dark:text-porsche-50">
           It's code- and field-intensive research, involving many collaborators
@@ -220,26 +227,32 @@ const buttonClasses = cntl`
       >
         Research Questions
       </h2>
-      <h3 class={sectionTitleClasses}>
-        How do islands <span class={highlightedTextClasses}>generate</span> and
-        <span class={highlightedTextClasses2}>maintain</span> biodiversity?
-      </h3>
-      <div class={sectionTitleClasses}>
-        <h3>
-          How can we leverage <span class={highlightedTextClasses}
-            >emerging AI</span
-          > technologies to understand <span class={highlightedTextClasses2}
-            >complex</span
-          > biological systems?
-        </h3>
-      </div>
-      <div class={sectionTitleClasses}>
-        <h3>
-          How can we improve <span class={highlightedTextClasses}>access</span> to
-          <span class={highlightedTextClasses2}>cutting-edge</span> biodiversity studies?
-        </h3>
-      </div>
-    </div>
+    <h3 class={sectionTitleClasses}>
+  How can we quantify
+  <span class={highlightedTextClasses}> microevoltionary transitions</span>
+  within
+  <span class={highlightedTextClasses2}>paleopopulations</span>?
+</h3>
+
+<div class={sectionTitleClasses}>
+  <h3>
+    How can
+    <span class={highlightedTextClasses}>museum collections</span>,
+    geometric morphometrics, and
+    <span class={highlightedTextClasses2}>artificial intelligence</span>
+    be integrated to study patterns in the fossil record?
+  </h3>
+</div>
+
+<div class={sectionTitleClasses}>
+  <h3>
+    How can scientific research be translated into meaningful
+    <span class={highlightedTextClasses}>educational experiences</span>
+    and broader
+    <span class={highlightedTextClasses2}>public engagement</span>
+    opportunities?
+  </h3>
+</div>
     <div class={buttonClasses}>
       <a href="/projects">
         <p>Learn more</p>

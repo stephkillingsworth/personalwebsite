@@ -1,0 +1,78 @@
+---
+import Content from "../Content.astro";
+import SectionHead from "../Section.astro";
+import ProjectPubs from "../../layouts/ProjectPubs.astro";
+import PubButton from "../buttons/PubButton.astro";
+import { Image } from "astro:assets";
+import srGraphic from "../../assets/img/sr-graphic.jpg";
+import cntl from "cntl";
+
+const firstParagraphClasses = cntl`
+  first-letter:text-8xl
+  first-letter:font-semibold
+  first-letter:mr-2
+  first-letter:float-left
+`;
+
+const spaceClasses = cntl`mr-1`;
+---
+
+<div>
+  <SectionHead
+    title="Strontium Isotope Geochemistry & REEs"
+    subtitle="Using fossil shark teeth as geochemical archives to calibrate Neogene chronology"
+  />
+  <Content>
+    <p class={firstParagraphClasses}>
+      Fossil shark teeth are remarkably durable and abundant in the fossil
+      record, and they preserve geochemical signatures that record the chemistry
+      of ancient seawater. My MS research focused on using strontium (Sr)
+      isotope ratios and rare earth elements (REEs) preserved in fossil shark
+      teeth as age proxies for Neogene fossil sites across Florida. Because
+      marine Sr isotope ratios have changed predictably through geologic time,
+      teeth that preserve primary geochemical signatures can be matched to a
+      global Sr isotope curve to estimate the age of the deposit in which they
+      were found.
+    </p>
+    <p class="mt-2">
+      This work demonstrated that marine strontium isotopes preserved in fossil
+      shark teeth can calibrate Neogene land mammal evolution, providing
+      chronological anchors for fossil sites that lack other reliable dating
+      material. The approach has broad implications for improving the temporal
+      resolution of Florida's rich Neogene fossil record and for calibrating
+      biostratigraphic frameworks across the southeastern United States. I also
+      investigated REE uptake patterns to assess diagenetic alteration and
+      evaluate which specimens retain reliable primary geochemical signals.
+    </p>
+    <figure class="mt-6">
+      <Image
+        src={srGraphic}
+        alt="Graphical abstract from Killingsworth et al. 2025 showing strontium isotopes in fossil shark teeth"
+        width={900}
+        class="rounded-xl w-full"
+      />
+      <figcaption class="text-xs text-porsche-950 dark:text-porsche-50 mt-2 pl-3 border-l-2 border-porsche-950 dark:border-porsche-50 leading-relaxed">
+        Graphical abstract from <span class="italic">Killingsworth et. al.</span>, 2025.
+      </figcaption>
+    </figure>
+  </Content>
+  <div class="mt-4 mb-2 text-semibold text-lg">Publications:</div>
+  <ProjectPubs author="Killingsworth et. al.">
+    <PubButton
+      author="Killingsworth, S., MacFadden, B., Moran, S. M., Perez, V. J., Pirlo, J., & Ziegler, M."
+      year="2025"
+      title="Marine strontium isotopes preserved in fossil shark teeth calibrate Neogene land mammal evolution"
+      doi="https://doi.org/10.1016/j.palaeo.2024.112698"
+      pdfUrl="https://doi.org/10.1016/j.palaeo.2024.112698"
+    />
+  </ProjectPubs>
+  <ProjectPubs author="MacFadden et. al.">
+    <PubButton
+      author="MacFadden, B. J., Bohaska, D., Cone, L., Killingsworth, S. R., Zbinden, S. P., Moran, S. M., Perez, V. J."
+      year="2024"
+      title="Early Miocene land mammals and chronology of the Belgrade Formation, eastern North Carolina"
+      doi="https://doi.org/10.1017/jpa.2024.68"
+      pdfUrl="https://doi.org/10.1017/jpa.2024.68"
+    />
+  </ProjectPubs>
+</div>

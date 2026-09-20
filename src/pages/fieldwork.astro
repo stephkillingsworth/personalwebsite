@@ -1,216 +1,381 @@
 ---
 import PageTitle from "../components/PageTitle.astro";
 import Layout from "../layouts/Layout.astro";
-import Timeline from "../layouts/Timeline.astro";
-import TimelineItem from "../layouts/TimelineItem.astro";
 import fieldIcon from "../assets/icons/fieldwork.svg";
 import Background from "../components/Background.astro";
 import MainPage from "../components/MainPage.astro";
 import PageDescription from "../components/PageDescription.astro";
+
+// Fieldwork images
+import imgCalifornia      from "../assets/img/california.jpg";
+import imgCanoe           from "../assets/img/canoe.jpg";
+import imgFlorida         from "../assets/img/Florida.jpg";
+import imgHorsetooth      from "../assets/img/horsetoothinsitu.jpg";
+import imgMeinnm          from "../assets/img/meinnm.jpg";
+import imgMeinnm2         from "../assets/img/meinnm2.jpg";
+import imgNebraska        from "../assets/img/nebraska.jpg";
+import imgNewmexico       from "../assets/img/newmexico.jpg";
+import imgPanama          from "../assets/img/panama.jpg";
+import imgThehike         from "../assets/img/thehike.jpg";
+// Museum collections images
+import imgUcmp            from "../assets/img/ucmp.jpg";
+import imgMicrofossils    from "../assets/img/microfossils.jpg";
+import imgMeincar         from "../assets/img/meincar.jpg";
+import imgCabinet         from "../assets/img/cabinet.jpg";
+import imgAmnh            from "../assets/img/amnh.jpg";
+import imgUsnm            from "../assets/img/usnm.jpg";
+// Lab images
+import imgMeinlab         from "../assets/img/meinlab.jpg";
+import imgMicroct         from "../assets/img/microct.jpg";
+import imgREEs            from "../assets/img/REEs.jpg";
+import imgIcpms           from "../assets/img/ICPMS.jpg";
+import imgLabvisit        from "../assets/img/labvisit.jpg";
+import imgGeochemistry    from "../assets/img/geochemistry.jpg";
 ---
 
-<Layout title="Fieldwork">
+<Layout title="Field, Museum Collections, & Lab Work">
   <MainPage>
     <Background backgroundImage={fieldIcon} />
-    <PageTitle title="Fieldwork">
+    <PageTitle title="Field, Museum Collections, & Lab Work">
       <PageDescription>
-        My fieldwork is mainly on Southeast Asian islands. However, I have also
-        been privileged to participate in fieldwork in Australia and the
-        mainland United States. The journey spans over 12 years, conducting 30+
-        field expeditions across five countries. These field expeditions
-        involved countless individuals, from local communities, park rangers,
-        friends, colleagues, and research advisors to students I had the honor
-        of mentoring. I started as someone more useful in washing dishes than
-        preparing specimens 😉. Eventually, I led complex field expeditions in
-        the remote mountains of Indonesia. My favorite parts of this journey are
-        contributing to the growth of essential natural history collections,
-        many of which were unknown to science, and working among exceptional
-        scientists and incredible local communities.
+        My research spans field collecting, museum collections visits, and
+        laboratory geochemistry. In the field, I have collected vertebrate
+        fossils across Florida, Nebraska, New Mexico, North Carolina,
+        California, and Panama. Museum collections work has taken me to the
+        Florida Museum of Natural History, the American Museum of Natural
+        History, the Smithsonian National Museum of Natural History, the
+        Natural History Museum of Los Angeles County, the UC Museum of
+        Paleontology at Berkeley, and the Panhandle Plains Historic Museum,
+        where I have studied fossil horse, shark, and mammal specimens central
+        to my dissertation and MS thesis research. In the lab, my geochemical
+        work includes column chemistry, ICP-MS, rare earth element (REE)
+        analysis, strontium isotope analysis, and micro-CT scanning.
+
       </PageDescription>
     </PageTitle>
-    <Timeline>
-      <TimelineItem
-        date="August-December 2023"
-        title="Mts. Patah, Bandahara, Kemiri"
-        subtitle="Sumatra, Indonesia 🇮🇩"
-      >
-        <p
-          class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
-        >
-          Details will be updated soon...
-        </p>
-      </TimelineItem>
-      <TimelineItem
-        date="February-April 2023"
-        title="Mt. Gede"
-        subtitle="West Java, Indonesia 🇮🇩"
-      >
-        <p
-          class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100"
-        >
-          Details will be updated soon...
-        </p>
-      </TimelineItem>
-      <TimelineItem
-        date="April-May 2022"
-        title="Black Gap WMA"
-        subtitle="Texas, USA 🇺🇸"
-      />
-      <TimelineItem
-        date="May 2021"
-        title="Davis Mountains"
-        subtitle="Texas, USA 🇺🇸"
-      />
-      <TimelineItem
-        date="July-August 2019"
-        title="Mt. Murud"
-        subtitle="Sarawak, Malaysia 🇲🇾"
-      />
-      <TimelineItem
-        date="July 2018"
-        title="Mt. Galang"
-        subtitle="Central Sulawesi, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="March-April 2018"
-        title="Mt. Talamau"
-        subtitle="West Sumatra, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="November-December 2017"
-        title="Mt. Torompupu"
-        subtitle="Central Sulawesi, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="October 2017"
-        title="Solok Selatan"
-        subtitle="West Sumatra, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="August-September 2017"
-        title="Mt. Katopasa, Central Sulawesi, Indonesia"
-        subtitle="Central Sulawesi, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="June 2017"
-        title="Wilson Promontory National Park"
-        subtitle="Victoria, Australia 🇦🇺"
-      />
-      <TimelineItem
-        date="November 2016"
-        title="Grampians National Park"
-        subtitle="Victoria, Australia 🇦🇺"
-      />
-      <TimelineItem
-        date="October-November 2016"
-        title="Mt. Bawakaraeng"
-        subtitle="South Sulawesi, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="July-August 2016"
-        title="Mt. Latimojong"
-        subtitle="South Sulawesi, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="June 2016"
-        title="Mt. Ambang"
-        subtitle="North Sulawesi, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="November 2015"
-        title="Grampians National Park"
-        subtitle="Victoria, Australia 🇦🇺"
-      />
-      <TimelineItem
-        date="June 2015"
-        title="Mt. Talamau"
-        subtitle="West Sumatra, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="December 2014"
-        title="Runtu"
-        subtitle="Central Kalimantan, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="September-October 2014"
-        title="Mts. Tujuh and Masurai"
-        subtitle="Jambi, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="June-July 2014"
-        title="San Rafael and Mt. Huraw"
-        subtitle="Samar Island, The Philippines 🇵🇭"
-      />
-      <TimelineItem
-        date="March 2014"
-        title="Cirebon"
-        subtitle="West Java, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="December 2013"
-        title="Mt. Maras"
-        subtitle="Banka Island, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="September-October 2013"
-        title="Mts. Salak, Slamet, and Ijen"
-        subtitle="Java, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="June 2013"
-        title="Kota Waringin Barat"
-        subtitle="Central Kalimantan, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="March 2013"
-        title="Mt. Dako"
-        subtitle="Central Sulawesi, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="January 2013"
-        title="Mts. Kerinci and Tujuh"
-        subtitle="Jambi, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="January 2013"
-        title="Mt. Tajam"
-        subtitle="Belitung Island, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="June-July 2012"
-        title="Mt. Singgalang"
-        subtitle="West Sumatra, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="May-June 2012"
-        title="Mt. Gandang Dewata"
-        subtitle="West Sulawesi, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="April 2012"
-        title="Mt. Malintang"
-        subtitle="West Sumatra, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="October 2010"
-        title="Siberut National Park, Mentawai Islands"
-        subtitle="West Sumatra, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="September 2010"
-        title="Mt. Sago"
-        subtitle="West Sumatra, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="June 2010"
-        title="Angkola"
-        subtitle="North Sumatra, Indonesia 🇮🇩"
-      />
-      <TimelineItem
-        date="June 2009"
-        title="Mt. Merapi"
-        subtitle=" West Sumatra, Indonesia 🇮🇩"
-      />
-    </Timeline>
+
+    <!-- ── SECTION NAV ────────────────────────────────────────────── -->
+    <nav class="section-nav">
+      <a href="#fieldwork">Fieldwork</a>
+      <span class="divider">·</span>
+      <a href="#collections">Museum Collections</a>
+      <span class="divider">·</span>
+      <a href="#lab">Lab &amp; Geochemistry</a>
+    </nav>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SECTION 1 — FIELDWORK
+    ══════════════════════════════════════════════════════════════ -->
+    <section id="fieldwork" class="work-section">
+      <h2 class="section-heading">Fieldwork</h2>
+
+      <div class="region-block">
+        <h3 class="region-label">North America &amp; Panama</h3>
+        <div class="photo-grid">
+          <figure class="photo-item photo-wide">
+            <img src={imgFlorida.src}    alt="Fieldwork in Florida" />
+            <figcaption>Florida</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src={imgNebraska.src}   alt="Fieldwork in Nebraska" />
+            <figcaption>Nebraska</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src={imgNewmexico.src}  alt="Fieldwork in New Mexico" />
+            <figcaption>New Mexico</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src={imgMeinnm.src}     alt="At the New Mexico site" />
+            <figcaption>New Mexico site</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src={imgMeinnm2.src}    alt="New Mexico fieldwork" />
+            <figcaption>New Mexico fieldwork</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src={imgThehike.src}    alt="The hike to field site" />
+            <figcaption>The hike</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src={imgHorsetooth.src} alt="Horse tooth in situ" />
+            <figcaption>Horse tooth in situ</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src={imgCalifornia.src} alt="Fieldwork in California" />
+            <figcaption>California</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src={imgPanama.src}     alt="Fieldwork in Panama" />
+            <figcaption>Panama</figcaption>
+          </figure>
+          <figure class="photo-item">
+            <img src={imgCanoe.src}      alt="Canoe fieldwork" />
+            <figcaption>By canoe</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SECTION 2 — MUSEUM COLLECTIONS
+    ══════════════════════════════════════════════════════════════ -->
+    <section id="collections" class="work-section">
+      <h2 class="section-heading">Museum Collections</h2>
+      <p class="section-intro">
+        Visiting natural history collections is an essential part of
+        comparative vertebrate research. These visits allow direct measurement
+        and study of type specimens, rare taxa, and historical series that are
+        not otherwise accessible.
+      </p>
+      <div class="photo-grid">
+        <figure class="photo-item photo-wide">
+          <img src={imgUcmp.src} alt="UC Museum of Paleontology" />
+          <figcaption>UC Museum of Paleontology (UCMP), Berkeley</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <img src={imgMicrofossils.src} alt="Microfossil specimens" />
+          <figcaption>Microfossil specimens</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <img src={imgMeincar.src} alt="Traveling to collections" />
+          <figcaption>En route to collections visit</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <img src={imgCabinet.src} alt="Museum specimen cabinet" />
+          <figcaption>Specimen cabinet</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <img src={imgAmnh.src} alt="American Museum of Natural History" />
+          <figcaption>AMNH, New York</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <img src={imgUsnm.src} alt="Smithsonian National Museum of Natural History" />
+          <figcaption>USNM, Washington D.C.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         SECTION 3 — LAB & GEOCHEMISTRY
+    ══════════════════════════════════════════════════════════════ -->
+    <section id="lab" class="work-section">
+      <h2 class="section-heading">Lab &amp; Geochemistry</h2>
+      <p class="section-intro">
+        Laboratory work bridges field collections and published findings.
+        Geochemical analyses — including isotope work and elemental
+        characterization — provide independent lines of evidence for
+        reconstructing environments, diets, and biogeographic histories.
+      </p>
+      <div class="photo-grid">
+        <figure class="photo-item photo-wide">
+          <img src={imgMeinlab.src} alt="In the lab" />
+          <figcaption>Lab work</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <img src={imgMicroct.src} alt="MicroCT scanning" />
+          <figcaption>MicroCT scanning</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <img src={imgREEs.src} alt="Rare earth element analysis" />
+          <figcaption>REE analysis</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <img src={imgIcpms.src} alt="ICP-MS instrument" />
+          <figcaption>ICP-MS</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <img src={imgLabvisit.src} alt="Lab visit" />
+          <figcaption>Lab visit</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <img src={imgGeochemistry.src} alt="Geochemistry work" />
+          <figcaption>Geochemistry</figcaption>
+        </figure>
+      </div>
+    </section>
+
   </MainPage>
 </Layout>
+
+<!-- ── STYLES ─────────────────────────────────────────────────────── -->
+<style>
+  /* ── tokens ── */
+  :root {
+    --gold:       #C9A465;
+    --gold-light: #E2C08A;
+    --ink:        #E8DCC8;
+    --muted:      #A89880;
+    --rule:       #3A3020;
+    --gap:        clamp(1.5rem, 4vw, 3rem);
+    --photo-size: 260px;
+    --photo-tall: 320px;
+  }
+
+  /* ── section nav ── */
+  .section-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    padding: 1rem 0 2rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: var(--gap);
+    font-size: 0.875rem;
+    letter-spacing: 0.01em;
+  }
+  .section-nav a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.15s;
+  }
+  .section-nav a:hover { color: var(--gold-light); }
+  .section-nav .divider { color: var(--rule); }
+
+  /* ── sections ── */
+  .work-section {
+    margin-bottom: calc(var(--gap) * 2.5);
+    scroll-margin-top: 5rem;
+  }
+
+  .section-heading {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    border-left: 4px solid var(--gold);
+    padding-left: 0.75rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: var(--gold);
+  }
+
+  .section-intro {
+    max-width: 65ch;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+
+  /* ── region blocks ── */
+  .region-block {
+    margin-bottom: calc(var(--gap) * 1.5);
+  }
+
+  .region-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  /* ── photo grid ──
+     flex instead of grid so the last row centers naturally
+     rather than leaving ragged left-aligned gaps.
+  ── */
+  .photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .photo-item {
+    margin: 0;
+    overflow: hidden;
+    width: var(--photo-size);
+    flex-shrink: 0;
+  }
+
+  .photo-item img {
+    width: 100%;
+    height: var(--photo-size);
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .photo-item:hover img {
+    transform: scale(1.03);
+  }
+
+  .photo-item figcaption {
+    font-size: 0.875rem;
+    color: var(--muted);
+    padding: 0.35rem 0.5rem 0.4rem;
+    letter-spacing: 0.02em;
+  }
+
+  /* wider item for hero shots — spans roughly 2 columns */
+  .photo-wide {
+    width: calc(var(--photo-size) * 2 + 0.85rem);
+  }
+  .photo-wide img {
+    height: var(--photo-tall);
+  }
+
+  /* ── timeline ── */
+  .timeline {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-left: 2px solid var(--gold);
+    padding-left: 1.25rem;
+  }
+
+  .tl-item {
+    display: grid;
+    grid-template-columns: 8rem 1fr;
+    gap: 0.5rem 1rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+  }
+  .tl-item:last-child { border-bottom: none; }
+
+  .tl-date {
+    font-size: 0.78rem;
+    color: var(--muted);
+    white-space: nowrap;
+    padding-top: 0.1rem;
+  }
+
+  .tl-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.6rem;
+    align-items: baseline;
+  }
+
+  .tl-body strong {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .tl-sub {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  /* ── responsive ── */
+  @media (max-width: 640px) {
+    :root {
+      --photo-size: 160px;
+      --photo-tall: 200px;
+    }
+    .photo-wide {
+      width: 100%;
+    }
+    .tl-item {
+      grid-template-columns: 1fr;
+      gap: 0.15rem;
+    }
+    .tl-date { font-size: 0.875rem; }
+    .section-nav { gap: 0.4rem 0.75rem; }
+  }
+</style>

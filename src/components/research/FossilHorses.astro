@@ -1,0 +1,114 @@
+---
+import Content from "../Content.astro";
+import SectionHead from "../Section.astro";
+import ProjectPubs from "../../layouts/ProjectPubs.astro";
+import PubButton from "../buttons/PubButton.astro";
+import { Image } from "astro:assets";
+import horseRangeChart from "../../assets/img/horse-range-chart.png";
+import museumLogos from "../../assets/img/museum-logos.png";
+import cntl from "cntl";
+
+const firstParagraphClasses = cntl`
+  first-letter:text-8xl
+  first-letter:font-semibold
+  first-letter:mr-2
+  first-letter:float-left
+`;
+
+const spaceClasses = cntl`mr-1`;
+---
+
+<div>
+  <SectionHead
+    title="Fossil Horse Macroevolution"
+    subtitle="Investigating macroevolutionary transitions in Neogene Equidae using phenomics and machine learning"
+  />
+  <Content>
+    <p class={firstParagraphClasses}>
+      Fossil horses (Family Equidae) provide one of the most complete records of
+      mammalian evolution in the fossil record, spanning over 55 million years
+      in North America. My dissertation research focuses on macroevolutionary
+      transitions in Neogene fossil horses, leveraging phenomics — the
+      large-scale, quantitative measurement of phenotypic variation — alongside
+      machine learning to detect patterns of evolutionary change across time and
+      space. By integrating museum collections from across North America with
+      computational approaches, I aim to reveal how populations of fossil horses
+      changed morphologically across major climatic and environmental
+      transitions.
+       <Content>
+    <p class={firstParagraphClasses}>
+   <figure class="float-right ml-4 mb-2 w-[400px]">
+  <Image
+    src={horseRangeChart}
+    alt="Geological range and North American Land Mammal Ages of latest Hemphillian equid faunas"
+    width={400}
+    class="rounded-xl"
+  />
+  <figcaption class="text-xs text-porsche-950 dark:text-porsche-50 mt-2 pl-3 border-l-2 border-porsche-950 dark:border-porsche-50 leading-relaxed">
+    <span class="font-semibold">Figure 2.</span>
+    Geological range and North American Land Mammal Ages (NALMAs) of latest Hemphillian, 
+    Hh4 interval equid faunas in North America, including the four widespread and two 
+    endemic species <span class="italic">(Killingsworth and MacFadden, 2023)</span>.
+    </figcaption>
+  </figure>
+    </p>
+    <p class="mt-2">
+      A central component of this work involves applying interpretable deep
+      learning models to images of fossil horse teeth, which preserve detailed
+      morphological information about diet, ecology, and phylogenetic
+      relationships. This approach allows me to quantify subtle variation across
+      large sample sizes that would be impractical to measure manually, opening
+      new windows into paleopopulation structure and evolutionary dynamics. This
+      work was recognized with a Romer Prize Session presentation at the 2026
+      Society of Vertebrate Paleontology meeting.
+    </p>
+    <p class="mt-2">
+      I also investigate species occurrence patterns of Late Miocene horses from
+      Florida, examining whether gaps in the fossil record reflect genuine
+      ecological absences, sampling biases, or both — an important methodological
+      question for interpreting evolutionary and biogeographic patterns from
+      museum collections.
+    </p>
+  </Content>
+  <SectionHead
+    title="Publications"
+  <div class="mt-8 mb-2 text-semibold text-lg">Publications:</div>
+  <ProjectPubs author="Killingsworth et. al.">
+    <PubButton
+      author="Killingsworth, S., MacFadden, B."
+      year="2023"
+      title="Species Occurrences of Late Miocene Horses (Equidae) from Florida: Sampling, Ecology, or Both?"
+      doi="https://doi.org/10.1017/pab.2023.35"
+      pdfUrl="https://doi.org/10.1017/pab.2023.35"
+    />
+  </ProjectPubs>
+  <ProjectPubs author="MacFadden et. al.">
+    <PubButton
+      author="MacFadden, B. J., Barberis, C., Vallejo-Pareja, M. C., Zbinden, S. P., Perez, V. J., Killingsworth, S. R., Marks, K., Hall, D., Porto, A."
+      year="2025"
+      title="AI and paleontology: Effects of vertebrate fossils sample size on machine learning image classification"
+      doi="https://doi.org/10.1017/pab.2025.10084"
+      pdfUrl="https://doi.org/10.1017/pab.2025.10084"
+    />
+    <span class={spaceClasses}>,</span>
+    <PubButton
+      author="MacFadden, B. J., Bohaska, D., Cone, L., Killingsworth, S. R., Zbinden, S. P., Moran, S. M., Perez, V. J."
+      year="2024"
+      title="Early Miocene land mammals and chronology of the Belgrade Formation, eastern North Carolina"
+      doi="https://doi.org/10.1017/jpa.2024.68"
+      pdfUrl="https://doi.org/10.1017/jpa.2024.68"
+    />
+  </ProjectPubs>
+  <SectionHead
+    title="Acknowledgements" />
+  <div class="text-porsche-950 dark:text-porsche-50 text-md mt-2">
+    <p class="mb-3">This research was supported by:</p>
+  
+   <figure>
+  <Image
+    src={museumLogos}
+    alt="American Museum of Natural History, UC Museum of Paleontology, Smithsonian Institution, Florida Museum of Natural History"
+    width={1000}
+    class="rounded-lg"
+  />
+</figure>

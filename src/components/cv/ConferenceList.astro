@@ -1,0 +1,227 @@
+---
+import cntl from "cntl";
+import PageTitle from "../../components/PageTitle.astro";
+import CardLayout from "../../layouts/CardLayout.astro";
+import Card from "../../components/Card.astro";
+import Background from "../../components/Background.astro";
+import teachingIcon from "../../assets/icons/teaching.svg";
+
+const cardDescriptionClasses = cntl`
+  mt-2
+  text-porsche-950
+  text-md
+`;
+
+const conferences = [
+  {
+    num: 1,
+    citation: "Killingsworth, S.",
+    rest: ", 2026. From Pixels to Morphospace: Interpretable Deep Learning Reveals Paleopopulation Structure and Evolutionary Variation in Neogene Horses (Family Equidae). SVP, Cleveland, Ohio.",
+    role: "Romer Prize Session",
+  },
+  {
+    num: 2,
+    citation: "Killingsworth, S.",
+    rest: ", 2026. Using machine learning models to assess variation in fossilized horse teeth for species classification in education. SVP, Cleveland, Ohio. (with Broo, J., Neilson, A., & Wuslyko, C.)",
+    role: "",
+  },
+  {
+    num: 3,
+    citation: "Killingsworth, S.",
+    rest: ", 2026. Museums as Resources for Rural Education. Southwest Regional Community Engagement Consortium Convening. El Paso, Texas.",
+    role: "Invited Panelist",
+  },
+  {
+    num: 4,
+    citation: "Killingsworth, S.",
+    rest: ", 2025. Detecting Macroevolutionary Transitions in Neogene Fossil Horses. Florida Museum of Natural History.",
+    role: "Invited Lightning Talk",
+  },
+  {
+    num: 5,
+    citation: "Killingsworth, S.",
+    rest: ", 2025. A Trail Ride Through Time: Epic Adventures and Neogene Horse Evolution. University of California, Berkeley.",
+    role: "Invited Talk",
+  },
+  {
+    num: 6,
+    citation: "Killingsworth, S.",
+    rest: ", 2025. Exploring Student Self-Efficacy in AI Through Model Building Artifacts. American Society of Engineering Education. (with Haire, G., Antonenko, P., Wusylko, C., Abramowitz, B., Waisome, J., Jones, D., MacFadden, B., & Perez, V.)",
+    role: "",
+  },
+  {
+    num: 7,
+    citation: "Killingsworth, S.",
+    rest: ", 2025. One Teacher's Experience Adapting and Innovative, Flexible Computer Vision Curriculum in a Science Classroom. American Society of Engineering Education. (with Wusylko, C., Still, R., Antonenko, P., Abramowitz, B., Perez, V., Waisome, J., & MacFadden, B.)",
+    role: "",
+  },
+  {
+    num: 8,
+    citation: "Killingsworth, S.",
+    rest: ", 2025. Black Middle Schoolers' Artificial Intelligence Self-Efficacy and Outcome Expectations in a Summer STEM Camp. AERA Annual Meeting. Denver, Colorado. (with Opoku, R., Jones, T., Haire, G., Wusylko, C., Lin, C. H., Adhami, N., MacFadden, B., Waisome, J., Perez, V., Abramowitz, B., King, N., & Antonenko, P.)",
+    role: "",
+  },
+  {
+    num: 9,
+    citation: "Killingsworth, S.",
+    rest: ", 2025. Exploring Black Girls' Sources of Self-Efficacy for Artificial Intelligence During an Informal Learning Experience. AERA Annual Meeting. Denver, Colorado. (with Jones, T., Opoku, R., Haire, G., Wusylko, C., Lin, C. H., Adhami, N., MacFadden, B., Waisome, J., Perez, V., Abramowitz, B., & Antonenko, P.)",
+    role: "",
+  },
+  {
+    num: 10,
+    citation: "Killingsworth, S.",
+    rest: ", 2025. Secondary Students' Outcome Expectations for AI: A Social Cognitive Career Theory Perspective. AERA Annual Meeting. Denver, Colorado. (with Haire, G., Jones, T., Opoku, R., Wusylko, C., Lin, C. H., Adhami, N., MacFadden, B., Waisome, J., Perez, V., Abramowitz, B., & Antonenko, P.)",
+    role: "",
+  },
+  {
+    num: 11,
+    citation: "Killingsworth, S.",
+    rest: ", 2024. Harnessing Machine Learning to Detect Macroevolutionary Transitions in Neogene Fossil Horses (Family Equidae) in North America. SVP Conference. Minneapolis, Minnesota.",
+    role: "",
+  },
+  {
+    num: 12,
+    citation: "Killingsworth, S.",
+    rest: ", 2024. The Shark AI Project: Utilizing Paleontology to Catalyze Learning About Artificial Intelligence. GSA Conference. Anaheim, California. (with Perez, V., MacFadden, B. J., Antonenko, P., Waisome, J., Abramowitz, B., & Vallejo-Pareja, M.)",
+    role: "",
+  },
+  {
+    num: 13,
+    citation: "Killingsworth, S.",
+    rest: ", 2024. Supporting Teachers to Integrate AI and Computer Science Through SharkAI: A Middle School Computer Science and Paleontology Curriculum. SITE Interactive. Online. (with Wusylko, C., Antonenko, P., Abramowitz, B., Waisome, J., Perez, V., & MacFadden, B.)",
+    role: "",
+  },
+  {
+    num: 14,
+    citation: "Killingsworth, S.",
+    rest: ", 2023. Geochemistry of Fossil Shark Teeth as Age Proxies for Neogene Sites of Florida. GSA Conference. Pittsburgh, Pennsylvania.",
+    role: "",
+  },
+  {
+    num: 15,
+    citation: "Killingsworth, S.",
+    rest: " & MacFadden, B., 2023. Species Occurrences of Late Miocene Horses (Equidae) from Florida: Sampling, Ecology, or Both? SVP Conference. Cincinnati, Ohio.",
+    role: "",
+  },
+  {
+    num: 16,
+    citation: "Killingsworth, S.",
+    rest: ", 2023. Fossil Shark Teeth Activate Engagement and Learning About AI in Florida Public Middle Schools. SVP Conference. Cincinnati, Ohio. (with MacFadden, B., Antonenko, P., Perez, V., Abramowitz, B., & Parnell, D.)",
+    role: "",
+  },
+  {
+    num: 17,
+    citation: "Killingsworth, S.",
+    rest: ", 2023. Chewing on Change: Training the Next Generation of Science Communicators. SVP Conference. Cincinnati, Ohio. (with Sharma, D., Bokor, J., Pirlo, J., & Abramowitz, B.)",
+    role: "",
+  },
+  {
+    num: 18,
+    citation: "Killingsworth, S.",
+    rest: ", Abramowitz, B., MacFadden, B., Carter, K., & Pirlo, J., 2022. Bringing Florida Museum of Natural History 3D Collections into K-12 Schools to Teach About Adaptations, Evolution, and Climate Change. SPNHC Conference. Edinburgh, Scotland.",
+    role: "",
+  },
+  {
+    num: 19,
+    citation: "Killingsworth, S.",
+    rest: ", 2022. Integrating AI Machine Learning into the Teaching of Paleontology Using Fossil Shark Teeth in Middle Schools. AI in Education Mini-Symposium. Gainesville, Florida. (with MacFadden, B., Antonenko, P., Magruder, J., Perez, V., & Abramowitz, B.)",
+    role: "",
+  },
+  {
+    num: 20,
+    citation: "Killingsworth, S.",
+    rest: ", 2021. Implementing Machine Learning and AI to Advance Science Curriculum. Florida Association of Science Teachers. St. Augustine, Florida. (with Abramowitz, B.)",
+    role: "",
+  },
+  {
+    num: 21,
+    citation: "Killingsworth, S.",
+    rest: ", 2021. The Water that Connects Us. Florida Association of Science Teachers. St. Augustine, Florida. (with Ivory, A. & Abramowitz, B.)",
+    role: "",
+  },
+  {
+    num: 22,
+    citation: "Killingsworth, S.",
+    rest: ", 2021. Engaging Scientists in Outreach to Support Florida Teachers. Southeast Association of Science Teacher Education. Tampa, Florida. (with Abramowitz, B., Ennes, M., Antonenko, P., MacFadden, B., & Ivory, A.)",
+    role: "",
+  },
+  {
+    num: 23,
+    citation: "Killingsworth, S.",
+    rest: ", 2021. Program Updates From the Scientist in Every Florida School. Florida Association of Science Supervisors. Miami, Florida. (with MacFadden, B.)",
+    role: "",
+  },
+  {
+    num: 24,
+    citation: "Killingsworth, S.",
+    rest: ", 2021. Structuring and Authentic Teacher Professional Development Experience. UF College of Education Research Symposium. Gainesville, Florida. (with Abramowitz, B., MacFadden, B. J., Pirlo, J., & Ziegler, M.)",
+    role: "",
+  },
+  {
+    num: 25,
+    citation: "Killingsworth, S.",
+    rest: ", Abramowitz, B., & Valle-Levinson, A., 2020. Exploring Air, Water, Land and Life with Scientist in Every Florida School. Florida Association of Science Teachers. Virtual.",
+    role: "",
+  },
+  {
+    num: 26,
+    citation: "Killingsworth, S.",
+    rest: ", 2020. TESI and Scientist in Every Florida School. Fall 2020 Geology Seminar Series. University of Florida. Gainesville, FL. (with MacFadden, B. & Abramowitz, B.)",
+    role: "",
+  },
+  {
+    num: 27,
+    citation: "Killingsworth, S.",
+    rest: " & Abramowitz, B., 2019. K-12 Outreach, Moonshot Project. Broader Impacts of Science on Society Graduate Course. University of Florida. Gainesville, Florida.",
+    role: "",
+  },
+  {
+    num: 28,
+    citation: "Killingsworth, S.",
+    rest: ", 2018. Scientist in Every Florida School and Teacher Experiences. Florida Association of Science Supervisors. (with MacFadden, B.)",
+    role: "",
+  },
+  {
+    num: 29,
+    citation: "Killingsworth, S.",
+    rest: " & Bokor, J., 2016. Summer Science Institute at CPET in Gainesville. Palm Beach County STEM Initiative Learning Showcase. West Palm Beach, Florida.",
+    role: "",
+  },
+  {
+    num: 30,
+    citation: "Killingsworth, S.",
+    rest: ", 2016. Experimental Science and Engineering and Design Lab/Project. Creativity Fest. West Palm Beach, Florida.",
+    role: "",
+  },
+  {
+    num: 31,
+    citation: "Killingsworth, S.",
+    rest: ", 2015. Translating the GABI-RET Experience into the Middle School Classroom. 2015 PCP PIRE/GABI RET/FOSSIL Collaborative Field Conference. Gainesville, Florida.",
+    role: "",
+  },
+];
+---
+
+<div class="mx-auto h-full max-w-5xl py-6 sm:py-16 lg:py-8">
+  <Background backgroundImage={teachingIcon} />
+  <PageTitle title="Conferences & Speaking Engagements" />
+  <CardLayout>
+  {
+  conferences.map((conf, index) => (
+    <Card
+      isLast={index === conferences.length - 1}
+    >
+      <p class={cardDescriptionClasses}>
+        <span class="font-bold">{conf.num}. </span>
+        <strong>{conf.citation}</strong>{conf.rest}
+        {conf.role && (
+          <span class="block font-serif text-lg text-porsche-800 mt-1">
+            {conf.role}
+          </span>
+        )}
+      </p>
+    </Card>
+  ))
+}
+  </CardLayout>
+</div>

@@ -1,0 +1,207 @@
+---
+import Content from "../Content.astro";
+import SectionHead from "../Section.astro";
+import ProjectPubs from "../../layouts/ProjectPubs.astro";
+import PubButton from "../buttons/PubButton.astro";
+import { Image } from "astro:assets";
+import teacherMB from "../../assets/img/teacher-MB.jpg";
+import fieldwork from "../../assets/img/fieldwork.png";
+import teacherTooth from "../../assets/img/teacher-tooth.png";
+import cntl from "cntl";
+
+const firstParagraphClasses = cntl`
+  first-letter:text-8xl
+  first-letter:font-semibold
+  first-letter:mr-2
+  first-letter:float-left
+`;
+
+const spaceClasses = cntl`mr-1`;
+---
+
+<div>
+  <SectionHead
+    title="Education & Broader Impacts"
+    subtitle="Connecting scientific research with educators, students, and communities across Florida"
+  />
+  <Content>
+    <p class={firstParagraphClasses}>
+      Science is most powerful when it is accessible. As the coordinator for the
+      <a href="https://www.floridamuseum.ufl.edu/earth-systems/scientist-in-every-florida-school/" target="_blank" rel="noopener noreferrer" class="text-chetwode-400 hover:text-chetwode-300 underline underline-offset-2">Scientist in Every Florida School (SEFS)</a>
+      program at the University of Florida Thompson Earth Systems Institute and Florida Museum of Natural
+      History, I develop and manage programs that place scientists directly into
+      K-12 classrooms and build lasting partnerships between researchers and
+      educators. This work spans teacher professional development, research-based
+      curriculum design, scientist-classroom partnerships, and outreach
+      programming that expands access to Earth and environmental sciences across
+      Florida — particularly in underserved and rural communities. Since 2019,
+      I have spearheaded, implemented, managed, and coordinated over 20 professional
+      development programs connecting K-12 teachers with cutting-edge research
+      across paleontology, AI, ecology, plant biology, and environmental science.
+    </p>
+
+    <div class="mt-8 pt-6 border-t border-porsche-950/20 dark:border-porsche-50/20">
+      <h3 class="text-lg font-semibold text-chetwode-400 mb-3">Montbrook Teacher Field Experiences</h3>
+      <p class="mt-2">
+        One of SEFS's most powerful teacher professional development experiences takes place at the
+        <a href="https://www.floridamuseum.ufl.edu/montbrook/" target="_blank" rel="noopener noreferrer" class="text-chetwode-400 hover:text-chetwode-300 underline underline-offset-2">Montbrook fossil site</a>
+        in Levy County, Florida — one of the most productive late Miocene vertebrate fossil localities
+        in the southeastern United States. Teachers participate in authentic paleontological fieldwork
+        alongside museum scientists, excavating and identifying fossil specimens in the field. This
+        immersive experience is designed to give teachers firsthand exposure to scientific methods,
+        helping them bring the nature of science to life in their own classrooms. Lessons developed
+        around this experience connect fossil collection, stratigraphic context, and evolutionary
+        history directly to K-12 science standards.
+      </p>
+
+      <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <figure>
+          <Image
+            src={teacherMB}
+            alt="Teachers at the Montbrook fossil site holding orange SEFS tote bags after a professional development dig experience"
+            width={400}
+            class="rounded-xl w-full object-cover"
+          />
+          <figcaption class="text-xs text-porsche-950 dark:text-porsche-50 mt-2 pl-3 border-l-2 border-porsche-950 dark:border-porsche-50 leading-relaxed">
+            Teachers at the Montbrook fossil site following a SEFS professional development dig experience.
+          </figcaption>
+        </figure>
+        <figure>
+          <Image
+            src={fieldwork}
+            alt="Scientists and teachers excavating fossils in the field at Montbrook"
+            width={400}
+            class="rounded-xl w-full object-cover"
+          />
+          <figcaption class="text-xs text-porsche-950 dark:text-porsche-50 mt-2 pl-3 border-l-2 border-porsche-950 dark:border-porsche-50 leading-relaxed">
+            Hands-on fossil excavation during the Montbrook teacher field experience.
+          </figcaption>
+        </figure>
+        <figure>
+          <Image
+            src={teacherTooth}
+            alt="Teacher holding a fossil tooth found during the Montbrook dig"
+            width={400}
+            class="rounded-xl w-full object-cover"
+          />
+          <figcaption class="text-xs text-porsche-950 dark:text-porsche-50 mt-2 pl-3 border-l-2 border-porsche-950 dark:border-porsche-50 leading-relaxed">
+            A teacher displays a fossil tooth recovered during fieldwork at Montbrook.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-6 border-t border-porsche-950/20 dark:border-porsche-50/20">
+      <h3 class="text-lg font-semibold text-chetwode-400 mb-3">Professional Development Initiatives</h3>
+      <p class="mt-2 mb-4">
+        Below is a selection of teacher professional development programs I have led through
+        <a href="https://www.floridamuseum.ufl.edu/earth-systems/scientist-in-every-florida-school/" target="_blank" rel="noopener noreferrer" class="text-chetwode-400 hover:text-chetwode-300 underline underline-offset-2">SEFS</a>,
+        spanning paleontology, AI and machine learning, ecology, plant biology, and environmental science.
+      </p>
+      <div class="text-sm text-porsche-950 dark:text-porsche-50 space-y-2">
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2026–2027</span> — Modeling Human Behavior in Climate Disasters Using Artificial Intelligence <span class="text-porsche-950/60 dark:text-porsche-50/60">(with X. Zhao)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2026–2027</span> — Experimental Design Using Robotic Fish <span class="text-porsche-950/60 dark:text-porsche-50/60">(with P. Musgrave)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2026–2027</span> — Archaeological Exploration of the Jupiter Inlet <span class="text-porsche-950/60 dark:text-porsche-50/60">(with A. Neilson)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2026</span> — Chewing on Change: Using Machine Learning to Assess Variation in Fossilized Horse Teeth <span class="text-porsche-950/60 dark:text-porsche-50/60">(with A. Neilson & C. Wusylko)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2025</span> — Ecological Competition Between Invasive and Native Species <span class="text-porsche-950/60 dark:text-porsche-50/60">(with B. Xue & M. Leibold)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2025–2028</span> — BII: Polyploidy: Integration Across Scales and Biological Systems <span class="text-porsche-950/60 dark:text-porsche-50/60">(with P. & D. Soltis)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2023–2024</span> — Research Infrastructure: Moving and Improving the Florida Museum Fish Collection <span class="text-porsche-950/60 dark:text-porsche-50/60">(with M. Ennes)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2022–2025</span> — SEFS Cohorts I–IV: AI Learning in K-12 with Fossil Sharks <span class="text-porsche-950/60 dark:text-porsche-50/60">(with B. Abramowitz, B. MacFadden, P. Antonenko & J. Waisome)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2022–2025</span> — SEFS Cohorts I–IV: Plant Pathology Professional Development for High School Teachers <span class="text-porsche-950/60 dark:text-porsche-50/60">(with W. Y. Song)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2022</span> — Chewing on Change: Bringing Fossil Horses into Title I Schools <span class="text-porsche-950/60 dark:text-porsche-50/60">(with B. Abramowitz, J. Bokor, J. Pirlo & B. MacFadden)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2022</span> — Adaptations, Evolution, and Climate Change Miami-Dade Teacher PD <span class="text-porsche-950/60 dark:text-porsche-50/60">(with B. Abramowitz, K. Carter & B. MacFadden)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2021</span> — The Hydrosphere Summer Professional Development for Teachers <span class="text-porsche-950/60 dark:text-porsche-50/60">(with B. Abramowitz)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2020</span> — The Nature of Science Summer Professional Development for Teachers <span class="text-porsche-950/60 dark:text-porsche-50/60">(with B. Abramowitz)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2020</span> — World Wetlands January Summit Teacher Professional Development <span class="text-porsche-950/60 dark:text-porsche-50/60">(with B. Abramowitz & B. MacFadden)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2019</span> — Connections to the Biosphere Summer Professional Development <span class="text-porsche-950/60 dark:text-porsche-50/60">(with B. Abramowitz, J. Pirlo & B. MacFadden)</span>
+        </div>
+        <div class="border-l-2 border-chetwode-400 pl-3 py-1">
+          <span class="font-semibold">2019</span> — SEFS Montbrook Dig Experience Professional Development <span class="text-porsche-950/60 dark:text-porsche-50/60">(with B. Abramowitz, J. Pirlo & B. MacFadden)</span>
+        </div>
+      </div>
+    </div>
+  </Content>
+
+  <div class="mt-4 mb-2 text-semibold text-lg">Publications:</div>
+  <ProjectPubs author="Ivory et. al.">
+    <PubButton
+      author="Ivory III, A. A., Ville-Veikko, Killingsworth, S., Donovan, V. M."
+      year="2026"
+      title="Integrating Scientific Tools into K-12 Education: Activities, Technologies, and Partnerships"
+      doi="https://edis.ifas.ufl.edu"
+      pdfUrl="https://edis.ifas.ufl.edu"
+    />
+  </ProjectPubs>
+  <ProjectPubs author="Wusylko et. al.">
+    <PubButton
+      author="Wusylko, C., Still, R., Antonenko, P. D., Abramowitz, B., Perez, V., Waisome, J., Killingsworth, S., MacFadden, B."
+      year="2026"
+      title="Exploring Bias and Building AI Models: Data Science for Middle Schoolers"
+      doi="https://doi.org/10.1080/08872376.2026.2632617"
+      pdfUrl="https://doi.org/10.1080/08872376.2026.2632617"
+    />
+    <span class={spaceClasses}>,</span>
+    <PubButton
+      author="Wusylko, C., Antonenko, P., Abramowitz, B., Waisome, J., Perez, V., Killingsworth, S., MacFadden, B."
+      year="2025"
+      title="Supporting Teachers to Integrate AI and Computer Science Through SharkAI: A Middle School Computer Science and Paleontology Curriculum"
+      doi="https://doi.org/10.70725/161207qresyx"
+      pdfUrl="https://doi.org/10.70725/161207qresyx"
+    />
+  </ProjectPubs>
+  <ProjectPubs author="Abramowitz et. al.">
+    <PubButton
+      author="Abramowitz, B., Ennes, M., Antonenko, P., Killingsworth, S."
+      year="2024"
+      title="A Narrative Inquiry into Teacher Efficacy for Teaching Climate Science with Technology in a Scientist-Teacher Partnership Program"
+      doi="https://doi.org/10.1007/s10956-024-10169-x"
+      pdfUrl="https://doi.org/10.1007/s10956-024-10169-x"
+    />
+    <span class={spaceClasses}>,</span>
+    <PubButton
+      author="Abramowitz, B., Ennes, M., Killingsworth, S., Antonenko, P., MacFadden, B., Ivory, A."
+      year="2021"
+      title="Science in School: Transforming K-12 Outreach through Scientist Teacher Partnerships"
+      doi="https://doi.org/10.15695/jstem/v4i1.14"
+      pdfUrl="https://doi.org/10.15695/jstem/v4i1.14"
+    />
+  </ProjectPubs>
+  <ProjectPubs author="MacFadden et. al.">
+    <PubButton
+      author="MacFadden, B. J., Pirlo, J., Abramowitz, B., Killingsworth, S., Ziegler, M."
+      year="2020"
+      title="Authentic field experiences for STEM teachers: Collecting Florida fossils"
+      doi="https://doi.org/10.1101/2020.07.02.184077"
+      pdfUrl="https://doi.org/10.1101/2020.07.02.184077"
+    />
+  </ProjectPubs>
+</div>

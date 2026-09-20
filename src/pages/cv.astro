@@ -1,24 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import PublicationList from "../components/cv/PublicationList.astro";
-import TeachingPortfolio from "../components/cv/TeachingPortfolio.astro";
-import OutreachAndServices from "../components/cv/OutreachAndServices.astro";
+import ConferenceList from "../components/cv/ConferenceList.astro";
+import BroaderImpactsList from "../components/cv/BroaderImpactsList.astro";
 import MainPage from "../components/MainPage.astro";
 import cntl from "cntl";
 
 const tabData = [
-  {
-    id: "publications",
-    label: "Publications",
-  },
-  {
-    id: "teaching",
-    label: "Teaching",
-  },
-  {
-    id: "outreach",
-    label: "Outreach",
-  },
+  { id: "publications", label: "Publications" },
+  { id: "conferences", label: "Conferences" },
+  { id: "broader-impacts", label: "Broader Impacts" },
 ];
 
 const tabContainerClasses = cntl`
@@ -77,11 +68,11 @@ const inactiveClass = cntl`
     <div id="publications-section" class="">
       <PublicationList />
     </div>
-    <div id="teaching-section" class="hidden">
-      <TeachingPortfolio />
+    <div id="conferences-section" class="hidden">
+      <ConferenceList />
     </div>
-    <div id="outreach-section" class="hidden">
-      <OutreachAndServices />
+    <div id="broader-impacts-section" class="hidden">
+      <BroaderImpactsList />
     </div>
   </MainPage>
 </Layout>
@@ -93,7 +84,7 @@ const inactiveClass = cntl`
     function showSection(section: string) {
       console.log("showSection called with:", section);
 
-      const sections = ["publications", "teaching", "outreach"];
+      const sections = ["publications", "conferences", "broader-impacts"];
 
       sections.forEach((sec) => {
         const element = document.querySelector(`#${sec}-section`);
