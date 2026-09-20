@@ -1,3 +1,6 @@
-# <img src="https://raw.githubusercontent.com/hhandika/hhandika-com/main/public/favicon-dark.svg" alt="Web logo" width="40"> HHANDIKA-COM
+# Stephanie Killingsworth's Personal Website
 
-A complete rewrite of my personal website, [hhadika.com](https://www.hhandika.com/), using [Astro](https://astro.build). Work in progress.
+This is the personal website and template for [www.stephaniekillingsworth.com](https://www.stephaniekillingsworth.com).
+
+The bones of this website were developed thanks to [Heru Handika](https://github.com/hhandika) and [Astro](https://astro.build).
+
