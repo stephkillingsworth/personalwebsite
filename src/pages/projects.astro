@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import PageTitle from "../components/PageTitle.astro";
 import researchIcon from "../assets/icons/research.svg";
-import Background from "../components/Background.astro";
 import MainPage from "../components/MainPage.astro";
 import PageDescription from "../components/PageDescription.astro";
 import cntl from "cntl";
@@ -57,7 +56,6 @@ const inactiveClass = cntl`
 
 <Layout title="Research Projects">
   <MainPage>
-    <Background backgroundImage={researchIcon} />
     <PageTitle title="Research Projects">
       <PageDescription>
         This page highlights a selection of the research, education, and outreach projects I have contributed to throughout my graduate career. Spanning fossil mammals, geochemistry, artificial intelligence, and STEM education, these projects reflect my interdisciplinary approach to understanding the past while building connections among science, technology, and society.
