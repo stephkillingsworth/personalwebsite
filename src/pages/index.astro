@@ -2,8 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 import profilePhoto from "../assets/img/profile.webp";
 import Stats from "../components/Stats.astro";
-import rodentSvg from "../assets/icons/mammals.svg";
-import Background from "../components/Background.astro";
 import cntl from "cntl";
 import MainPage from "../components/MainPage.astro";
 import PageDescription from "../components/PageDescription.astro";
@@ -130,7 +128,6 @@ const buttonClasses = cntl`
   title="Cenozoic mammalian evolution, museum collections, and quantitative paleobiology"
 >
   <MainPage>
-    <Background backgroundImage={rodentSvg} />
     <div class="text-center item-center mt-8 md:mt-16">
       <Image
         class="block mx-auto rounded-full sm:mx-auto"

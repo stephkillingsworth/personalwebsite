@@ -1,15 +1,12 @@
 ---
-import Background from "../../components/Background.astro";
 import MainPage from "../../components/MainPage.astro";
 import Layout from "../../layouts/Layout.astro";
-import rodentSvg from "../../assets/icons/mammals.svg";
 import profilePhoto from "../../assets/img/profile.webp";
 import { Image } from "astro:assets";
 ---
 
 <Layout title="Island small mammals and inclusive biodiversity software">
   <MainPage>
-    <Background backgroundImage={rodentSvg} />
     <div class="text-center item-center mt-8 md:mt-16">
       <Image
         class="block mx-auto rounded-full sm:mx-auto"
