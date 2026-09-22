@@ -17,6 +17,7 @@ interface JournalArticle {
   altmetricImg?: string;
   isRequest: boolean;
   marker?: string;
+  number?: string;
 }
 
 const {
@@ -31,7 +32,8 @@ const {
   pdfUrl,
   altmetricImg,
   isRequest,
-  marker
+  marker,
+  number
 } = Astro.props as JournalArticle;
 ---
 
@@ -41,7 +43,7 @@ const {
       <img src={altmetricImg} alt="Altmetric score" class="w-16 h-16" />
     )}
     <p class="text-chetwode-950 dark:text-chetwode-50">
-      <Authors authors={authors} /> {title}. <em>{journal}</em>{pageVol && `, ${pageVol}` ? `, ${pageVol}` : ""}. <span class="text-porsche-400 font-bold">{marker}</span>
+      <Authors authors={authors} /> {number && `${number} `}{title}. <em>{journal}</em>{pageVol && `, ${pageVol}` ? `, ${pageVol}` : ""}. <span class="text-porsche-400 font-bold">{marker}</span>
     </p>
   </div>
 
